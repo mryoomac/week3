@@ -33,8 +33,7 @@ function Calculator(z, x, c) {
         var operation = c
     if (!a || !b || !operation) return `Error: No number or sign specified.`;
     if (isNaN(a) || isNaN(b)) return `Error: The specified character is not a digit.`;
-    if (!['+', '-', '*', '/', '%'].some(t => t.includes(operation))) return `Error: Wrong operation type.`;
-        switch (operation) {
+            switch (operation) {
             case `+`:
                 return a + b;
             case `-`:
@@ -45,8 +44,8 @@ function Calculator(z, x, c) {
                 return a / b;
             case `%`:                
                 return a % b;
-            case `default`:
-                return `Option not implemented.`;
+            default:
+                return `Error: Wrong operation type.`;
         }
     }
 
